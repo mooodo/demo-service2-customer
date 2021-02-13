@@ -1,0 +1,27 @@
+{
+  "id": 10001,
+  "name": "李秋水",
+  "sex": "女",
+  "birthday": 307555200000,
+  "identification": "510110197910012312",
+  "phoneNumber": "13388990123",
+  "addresses":[
+  	{"id":1000100,
+	  "country":"中国",
+	  "province":"湖北",
+	  "city":"武汉",
+	  "zone":"洪山区",
+	  "address":"珞瑜路726号",
+	  "customerId":10001,
+	  "phoneNumber":"13300224466"
+  	},
+  	{"id":1000101,
+	  "country":"中国",
+	  "province":"湖北",
+	  "city":"荆州",
+	  "zone":"沙市区",
+	  "address":"北京西路410号",
+	  "customerId":10001,
+	  "phoneNumber":"13388990123"
+  	}]
+}
