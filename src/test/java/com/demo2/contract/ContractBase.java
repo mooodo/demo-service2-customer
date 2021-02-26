@@ -10,9 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.demo2.customer.CustomerApplication;
-import com.demo2.support.web.OrmController;
+//import com.demo2.support.web.OrmController;
 
-import io.restassured.module.mockmvc.RestAssuredMockMvc;
+//import io.restassured.module.mockmvc.RestAssuredMockMvc;
 
 /**
  * @author fangang
@@ -21,9 +21,9 @@ import io.restassured.module.mockmvc.RestAssuredMockMvc;
 @SpringBootTest(classes=CustomerApplication.class)
 public class ContractBase {
 	@Autowired
-	private OrmController controller;
+	//private OrmController controller;
 	@Before
 	public void setup() {
-		RestAssuredMockMvc.standaloneSetup(controller);
+		//RestAssuredMockMvc.standaloneSetup(controller);
 	}
 }

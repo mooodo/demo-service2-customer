@@ -14,6 +14,6 @@
 				<property name="sqlMapper" value="com.demo2.customer.query.dao.CustomerMapper"></property>
 			</bean>
 		</property>
-		<property name="dao" ref="basicDao"></property>
+		<property name="dao" ref="repositoryWithCache"></property>
 	</bean>
 </beans>
