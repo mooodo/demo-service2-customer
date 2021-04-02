@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vobjs>
+  <vo class="com.demo2.customer.entity.Customer" tableName="Customer">
+    <property name="id" column="id" isPrimaryKey="true"></property>
+    <property name="name" column="name"></property>
+    <property name="sex" column="sex"></property>
+    <property name="birthday" column="birthday"></property>
+    <property name="identification" column="identification"></property>
+    <property name="phone_number" column="phone_number"></property>
+    <join name="addresses" joinKey="customer_id" joinType="oneToMany" isAggregation="true" class="com.demo2.customer.entity.Address"></join>
+  </vo>
+  <vo class="com.demo2.customer.entity.Address" tableName="Address">
+  	<property name="id" column="id" isPrimaryKey="true"></property>
+  	<property name="customer_id" column="customer_id"></property>
+  	<property name="country_id" column="country_id"></property>
+  	<property name="province_id" column="province_id"></property>
+  	<property name="city_id" column="city_id"></property>
+  	<property name="zone_id" column="zone_id"></property>
+  	<property name="address" column="address"></property>
+  	<property name="phone_number" column="phone_number"></property>
+  	<join name="country" joinKey="country_id" joinType="manyToOne" class="com.demo2.customer.entity.Country"></join>
+  	<join name="province" joinKey="province_id" joinType="manyToOne" class="com.demo2.customer.entity.Province"></join>
+  	<join name="city" joinKey="city_id" joinType="manyToOne" class="com.demo2.customer.entity.City"></join>
+  	<join name="zone" joinKey="zone_id" joinType="manyToOne" class="com.demo2.customer.entity.Zone"></join>
+  </vo>
+  <vo class="com.demo2.customer.entity.Country" tableName="Country">
+  	<property name="id" column="id" isPrimaryKey="true"></property>
+  	<property name="name" column="name"></property>
+  </vo>
+  <vo class="com.demo2.customer.entity.Province" tableName="Province">
+  	<property name="id" column="id" isPrimaryKey="true"></property>
+  	<property name="name" column="name"></property>
+  	<property name="country_id" column="country_id"></property>
+  </vo>
+  <vo class="com.demo2.customer.entity.City" tableName="City">
+  	<property name="id" column="id" isPrimaryKey="true"></property>
+  	<property name="name" column="name"></property>
+  	<property name="province_id" column="province_id"></property>
+  </vo>
+  <vo class="com.demo2.customer.entity.Zone" tableName="Zone">
+  	<property name="id" column="id" isPrimaryKey="true"></property>
+  	<property name="name" column="name"></property>
+  	<property name="province_id" column="province_id"></property>
+  	<property name="city_id" column="city_id"></property>
+  </vo>
+</vobjs>

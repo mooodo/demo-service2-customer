@@ -1,0 +1,29 @@
+{"id":1000100,
+  "countryId":1000,
+  "provinceId":420000,
+  "cityId":420100,
+  "zoneId":420111,
+  "address":"珞瑜路726号",
+  "customerId":10001,
+  "phoneNumber":"13300224466",
+  "country":{
+    "id":1000,
+    "name":"中国"
+  },
+  "province":{
+    "id":420000,
+    "name":"湖北省",
+  "countryId":1000
+  },
+  "city":{
+    "id":420100,
+    "name":"武汉市",
+    "provinceId":420000
+  },
+  "zone":{
+    "id":420111,
+    "name":"洪山区",
+    "city_id":420100,
+    "provinceId":420000
+  }
+}
