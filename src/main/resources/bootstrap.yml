@@ -51,9 +51,8 @@ eureka:
 spring:
   profiles: docker
   cloud:
-    nacos:
-      config:
-        server-addr: {$CONFIG_URL}
-        file-extension: yaml
+    config:
+      uri: ${GIT_URL}
+      failFast: true
 server:
   port: ${SERVICE_PORT:9002}
