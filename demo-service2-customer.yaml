@@ -16,6 +16,16 @@ spec:
       labels:
         app: demo-service2-customer
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: "app"
+                    operator: In
+                    values:
+                      - demo-service2-customer
+              topologyKey: "kubernetes.io/hostname"
       containers:
       - name: demo-service2-customer
         image: repository:5000/demo-service2-customer
