@@ -11,9 +11,9 @@
 	<bean id="customerQry" class="com.demo2.support.repository.AutofillQueryServiceImpl">
 		<property name="queryDao">
 			<bean class="com.demo2.support.dao.impl.QueryDaoMybatisImpl">
-				<property name="sqlMapper" value="com.demo2.customer.query.dao.CustomerMapper"></property>
+				<property name="sqlMapper" value="com.demo2.customer.query.dao.CustomerMapper"/>
 			</bean>
 		</property>
-		<property name="dao" ref="repository"></property>
+		<property name="dao" ref="repository"/>
 	</bean>
 </beans>

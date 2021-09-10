@@ -15,32 +15,32 @@ import com.demo2.customer.entity.Customer;
 public interface CustomerService {
 	/**
 	 * save a customer
-	 * @param customer
+	 * @param customer the customer entity
 	 */
 	public void save(Customer customer);
 	/**
 	 * delete a customer
-	 * @param id
+	 * @param id the id of customer
 	 */
 	public void delete(long id);
 	/**
-	 * @param id
-	 * @return the customer of the id.
+	 * @param id the id of the customer
+	 * @return the customer by id.
 	 */
 	public Customer load(long id);
 	/**
 	 * @param ids the list of ids
-	 * @return the list of customers
+	 * @return the list of customers by ids
 	 */
 	public List<Customer> loadMore(List<Long> ids);
 	/**
-	 * @param id
-	 * @return the address of the id
+	 * @param id the id of the address
+	 * @return the address by id
 	 */
 	public Address loadAddress(long id);
 	/**
 	 * @param ids the list of ids of the addresses
-	 * @return the list of the addresses
+	 * @return the list of the addresses by ids
 	 */
 	public List<Address> loadAddresses(List<Long> ids);
 }
